@@ -1,0 +1,16 @@
+package com.epam.test.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+public class CarModelNotFoundAdvice {
+
+    @ResponseBody
+    @ExceptionHandler(CarModelNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    String carModelNotFoundHandler(CarModelNotFoundException ex) {
+        return ex.getMessage();
+    }
+}
