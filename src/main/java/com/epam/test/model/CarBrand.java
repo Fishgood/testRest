@@ -49,8 +49,7 @@ public class CarBrand {
     public String toString() {
         return "CarBrand{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", carModels=" + carModels +
+                ", name='" + name +
                 '}';
     }
 }

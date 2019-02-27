@@ -43,7 +43,8 @@ public class CarModel {
         return "CarModel{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", Car Brand: " + carBrand.getName() +
+                ", Car Brand id: " + carBrand.getId() +
+                ", Car Brand name: " + carBrand.getName() +
                 '}';
     }
 }

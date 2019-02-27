@@ -3,7 +3,6 @@ package com.epam.test.web;
 import com.epam.test.exception.CarBrandNotFoundException;
 import com.epam.test.model.CarBrand;
 import com.epam.test.repository.CarBrandRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -35,7 +34,7 @@ public class CarBrandController {
     }
 
     @PutMapping("/carBrands/{id}")
-    CarBrand replaceStudent(@RequestBody CarBrand carBrand, @PathVariable Long id) {
+    CarBrand replaceBrand(@RequestBody CarBrand carBrand, @PathVariable Long id) {
         return repository.findById(id)
                 .map(c -> {
                     c.setName(carBrand.getName());
